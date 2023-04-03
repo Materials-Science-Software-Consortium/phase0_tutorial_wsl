@@ -2,7 +2,6 @@
 .vscode
 build/
 source/_build
-*.md
 *.emf
 *.wmf
 *.swp
