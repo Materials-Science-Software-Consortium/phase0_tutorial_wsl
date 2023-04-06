@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 inivol=1000
 n=21

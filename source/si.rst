@@ -488,7 +488,7 @@ PHASE/0には格子振動の基準モードを計算する機能が備わって�
 nfinp.dataファイル
 ^^^^^^^^^^^^^^^^^^
 
-1.1節のSCF計算の入力にPhononブロックを追加し，振動解析の設定を施します。また，通常のSCF計算と違い質量が重要な意味を持つので，元素の質量を正しく設定します。
+\ :ref:`si2_scf_section` の入力にPhononブロックを追加し，振動解析の設定を施します。また，通常のSCF計算と違い質量が重要な意味を持つので，元素の質量を正しく設定します。
 
 .. code-block:: text
 
@@ -520,7 +520,7 @@ nfinp.dataファイル
 
    mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
-1.1節の計算と違い，対称性に応じて原子を変位させながら原子間力の計算を行うので複数回のSCF計算を行います。この例では2回のSCF計算が実行されます。原子を変位させると対称性がそこなわれるためSCF計算1回あたりの計算時間も長くなる傾向になります。
+\ :ref:`si2_scf_section` と違い，対称性に応じて原子を変位させながら原子間力の計算を行うので複数回のSCF計算を行います。この例では2回のSCF計算が実行されます。原子を変位させると対称性がそこなわれるためSCF計算1回あたりの計算時間も長くなる傾向になります。
 
 .. _計算結果の解析-4:
 
@@ -637,7 +637,7 @@ file_names.dataファイルの内容は下記のようになっています。
    nk=2
    ne=1
    rm -f nfefn.data
-   PHASE0="mpiexec -n ${np} $HOME/phase0_2023.01/bin/phase ne=${ne} nk=${nk}"
+   PHASE0="mpiexec -n ${np} $HOME/phase0_2022.01/bin/phase ne=${ne} nk=${nk}"
    for v in `seq 1 $n`;do
      vol=$( echo "($v-1)*$dv + $inivol" | bc -l )
      a=$( echo "e(l($vol)/3)" | bc -l )
