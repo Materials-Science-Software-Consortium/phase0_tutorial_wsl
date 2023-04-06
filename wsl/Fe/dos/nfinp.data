@@ -24,7 +24,10 @@ structure{
      alpha = 90, beta = 90, gamma = 90
    }
   symmetry{
-       crystal_structure = bcc
+    method = automatic
+    tspace{
+      lattice_system = bodycentered
+    }
   }
   magnetic_state  = ferro   !{para|af|ferro}
   atom_list{

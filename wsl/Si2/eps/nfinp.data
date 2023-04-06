@@ -24,7 +24,10 @@ structure{
       c_vector =  5.1300000000        5.1300000000        0.0000000000
     }
     symmetry{
-      crystal_structure = diamond
+       method = automatic
+       tspace{
+         lattice_system = facecentered
+       }
     }
     atom_list{
        atoms{

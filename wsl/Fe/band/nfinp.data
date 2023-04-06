@@ -21,7 +21,10 @@ structure{
   }
   magnetic_state = ferro
   symmetry{
-    crystal_structure = bcc
+    method = automatic
+    tspace{
+      lattice_system = bodycentered
+    }
   }
   atom_list{
     coordinate_system = internal
