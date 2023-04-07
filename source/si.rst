@@ -271,13 +271,13 @@ SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -color -with_fermi
+  $HOME/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -color -with_fermi
 
 band.plにはいくつかオプションがありますが，そのうち-color (カラーのバンド図を作成する)と -with_fermi (フェルミエネルギーの位置をあらわす線を描画する)を有効にしました。バンド図はband_structure.epsというEPS形式の画像ファイルとして得られます。これを表示するにはevinceコマンドを利用します。
 
 .. code-block:: text
 
-  $ evince band_structure.eps
+  evince band_structure.eps
 
 以上の操作によって :numref:`si_band` で示すようなバンド構造図が描画されます。
 
@@ -365,13 +365,13 @@ dos.dataファイルから“状態密度図”を作成するPerlスクリプ�
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -color -with_fermi
+  $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -color -with_fermi
 
 dos.plにはいくつかオプションがありますが，そのうち-color (カラーのバンド図を作成する)と -with_fermi (フェルミエネルギーの位置をあらわす線を描画する)を有効にしました。状態密度図はdensity_of_states.epsというEPS形式の画像ファイルとして得られます。これを表示するにはevinceコマンドを利用します。
 
 .. code-block:: text
 
-  $ evince density_of_states.eps
+  evince density_of_states.eps
 
 以上の操作によって :numref:`si_dos` で示すような状態密度図が描画されます。
 
@@ -558,7 +558,7 @@ mode.dataファイルから振動モード図を作成するPerlスクリプト�
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/freq.pl mode.data
+  $HOME/|PHASE020XX.yy|/bin/freq.pl mode.data
 
 結果得られる振動モード図は :numref:`si_freq` のようなものです。対称性に応じてモードを分類し，その振動数を表示します。
 
@@ -673,7 +673,7 @@ file_names.dataファイルの内容は下記のようになっています。
 
 .. code-block:: text
 
-  $ ./cubic.sh > log &
+  ./cubic.sh > log &
 
 この計算は少し時間がかかるので&によってバックグラウンドで実行するコマンドを採用しました。途中経過はlogファイルに記録されます。
 

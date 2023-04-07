@@ -69,6 +69,9 @@ PHASE/0は平面波基底を利用するので扱うことが可能なのは周�
     ...
     ...
   }
+  structure_evolution{
+    method = lbfgs
+  }
 
 以下の点が特徴的です。
 
@@ -78,6 +81,7 @@ PHASE/0は平面波基底を利用するので扱うことが可能なのは周�
 -  *c*\ 軸方向の\ *k*\ 点サンプリングメッシュが1となっています。表面モデルの場合通常表面に垂直な方向の\ *k*\ 点メッシュは1とします。違う言い方をすると，1としてよい（表面に垂直な方向の分散は無視できる）程度には厚い真空層を設ける必要があります。
 -  原子配置の指定にmobile属性を利用しています。この例では，最下層の原子のmobileをoffとすることによって構造最適化の対象から外しています。
 -  symmetryブロックにおいて，method = automaticだけでなくsw_inversion = onを利用しています。sw_inversionは系に反転対称性がある場合のみ利用できます。
+  - structure_evolutionブロックにおいてmethod = lbfgsという記述を行うことによって構造最適化の手法としてlbfgs法を採用しています。
 
 .. _計算の実行-7:
 
@@ -235,7 +239,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/dos.pl dos.data -mode=atom -color -with_fermi
+  $HOME/|PHASE020XX.yy|/dos.pl dos.data -mode=atom -color -with_fermi
 
 この操作の結果dos_a001.eps, dos_a002.eps, ....といったEPSファイルが得られます。参考のため，得られる結果の一部の図を紹介します。
 
@@ -249,10 +253,14 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 workfuncプログラムを使用することによって仕事関数を得ることができます。まずはworkfuncプログラムをコンパイルしましょう。
 
 .. parsed-literal::
-   pushd $HOME/|PHASE020XX.yy|/src_workfunc
-   make F90=ifort
-   make install
-   popd
+   $ pushd $HOME/|PHASE020XX.yy|/src_workfunc
+   $ make F90=ifort
+   ifort -c -O  m_Const_Parameters.f90
+   ifort -c -O   m_ArraySize_Parameters.F90
+   ...
+   $ make install
+   mv workfunc ../bin/
+   $ popd
 
 作業中のディレクトリーにすぐに戻ってこられるよう ``pushd`` ``popd`` コマンドを使ってみました。この例ではworkfuncプログラムをコンパイルする際に ``F90=ifort`` としてIntel Fortranコンパイラーを利用するようにしています。デフォルトで用いられるコンパイラーはgfortranですが，gfortranのバージョン10以上を用いる場合はオプションに ``-fallow-argument-mismatch`` を加える必要があります。そこで，gfortran 10以上を用いる場合は ``make`` コマンドに ``F90='gfortran -fallow-argument-mismatch'`` を渡すようにしてください。
 
@@ -260,8 +268,9 @@ workfuncプログラムを実行すると得られるnfvlcr_av.dataファイル�
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/workfunc
-  $HOME/|PHASE020XX.yy|/bin/workfunc.pl nfvlcr_av.data
+  $ $HOME/|PHASE020XX.yy|/bin/workfunc
+  $ $HOME/|PHASE020XX.yy|/bin/workfunc.pl nfvlcr_av.data
+  estimated work function : 4.74259 eV
 
 \ :numref:`si_surface_workfunc` はworkfunc.plスクリプトによって得られたポテンシャルと\ *c*\ 軸方向の距離の関係です。真空域でのポテンシャルの値とフェルミエネルギーとの差が仕事関数に対応します。
 

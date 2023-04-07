@@ -113,7 +113,7 @@ dos.plをたとえば以下のように実行します。
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -with_fermi -color -erange=-10,10
+  $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -with_fermi -color -erange=-10,10
 
 鉄の状態密度はエネルギーの範囲が広いので，-erangeオプションを用いてフェルミエネルギーを基準に-10 eVから10 eVの状態を対象としました。-color, -with_fermiオプションもシリコン結晶の場合と同様有効にしました。\ :numref:`fe_dos` のような状態密度図が得られるはずです。
 
