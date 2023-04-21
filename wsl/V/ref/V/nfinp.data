@@ -17,7 +17,7 @@ structure{
     atom_list{
         atoms{
             #units angstrom
-            #tag element rx ry rz thermo_group
+            #tag element rx ry rz mobile
              V 0.00 0.00 0.00 1
              V 0.25 0.25 0.25 1
              V 0.00 0.00 0.50 1
