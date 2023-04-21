@@ -65,13 +65,13 @@ nfinp.dataファイルは，PHASE/0の計算設定を行う「入力パラメー
 
 PHASE/0の入力パラメーターファイルは，このように波カッコ{}で囲った“ブロック”とそこで設定される値から構成されます。以下のような設定が施されています。
 
--  accuracyブロックにおいて計算精度に関わる設定が施されています。cutoff_wf, cutoff_cdにおいてそれぞれ波動関数および電荷密度のカットオフエネルギー，ksamplingブロックにおいて\ **k**\ 点サンプリングの設定が施されています。
--  structureブロックにおいて原子配置が指定されています。
+- accuracyブロックにおいて計算精度に関わる設定が施されています。cutoff_wf, cutoff_cdにおいてそれぞれ波動関数および電荷密度のカットオフエネルギー，ksamplingブロックにおいて\ **k**\ 点サンプリングの設定が施されています。
+- structureブロックにおいて原子配置が指定されています。
+
   - unit_cellブロックで単位胞を指定しています。
   - symmetryにおいて対称性が指定されています。method = automaticとすることによってプログラムが自動的に対称性を検出し，それを活用します。この際tspaceブロックのlattice_systemキーワードで結晶がfacecenteredであることを伝えています。
   - atom_listのatomsテーブルにおいて原子配置そのものを指定しています。
-
--  postprocessingブロックのchargeブロックにおいてsw_charge_rspace = onとしています。こうすることによって実空間にマップした電荷密度をファイルに出力します。また，filetype = cubeとすることによってその形式をGaussian cube形式にしています。
+- postprocessingブロックのchargeブロックにおいてsw_charge_rspace = onとしています。こうすることによって実空間にマップした電荷密度をファイルに出力します。また，filetype = cubeとすることによってその形式をGaussian cube形式にしています。
 
 file_names.dataファイル
 ^^^^^^^^^^^^^^^^^^^^^^^
