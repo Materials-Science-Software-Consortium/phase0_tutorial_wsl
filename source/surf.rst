@@ -211,7 +211,7 @@ file_names.dataファイルの内容は以下のようになっています。
 .. code-block::
 
   &fnames
-  F_POT(1) = '../../pp/Si_ggapbe_nc_01m.pp'
+  F_POT(1) = '../../pp/Si_ggapbe_paw_nc_01m.pp'
   F_POS = '../relax/nfdynm.data'
   /
 
