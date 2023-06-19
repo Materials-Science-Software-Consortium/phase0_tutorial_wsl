@@ -34,6 +34,7 @@ extensions = [
 #'sphinxcontrib.rsvgconverter',
 #'sphinxcontrib.inkscapeconverter'
 #'sphinxcontrib.cairosvgconverter'
+'sphinx.ext.imgconverter'
 ]
 #inkscape_converter_bin = '/usr/bin/inkscape'
 #rsvg_converter_args = ['-a']
