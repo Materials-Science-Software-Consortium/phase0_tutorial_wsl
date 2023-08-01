@@ -1,6 +1,7 @@
 # phase0_tutorial_wsl
 
 講習会などで用いている例題とその説明です．WSLで実行することを想定していますが，一般的なLinuxやmacOSにおいても問題なく実行することができます．
+[こちらから](https://phase0-tutorial-wsl.readthedocs.io/ja/latest/) HTML版のドキュメントをみることができます
 
 # 必要なソフトウェア
 
