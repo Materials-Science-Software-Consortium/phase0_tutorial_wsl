@@ -636,7 +636,7 @@ file_names.dataファイルの内容は下記のようになっています。
    nk=2
    ne=1
    rm -f nfefn.data
-   PHASE0="mpiexec -n ${np} $HOME/phase0_2022.01/bin/phase ne=${ne} nk=${nk}"
+   PHASE0="mpiexec -n ${np} $HOME/phase0_2023.01/bin/phase ne=${ne} nk=${nk}"
    for v in `seq 1 $n`;do
      vol=$( echo "($v-1)*$dv + $inivol" | bc -l )
      a=$( echo "e(l($vol)/3)" | bc -l )
