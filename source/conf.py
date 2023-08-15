@@ -31,9 +31,9 @@ release = '2023.01'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'sphinxcontrib.rsvgconverter',
+#'sphinxcontrib.rsvgconverter',
 #'sphinxcontrib.inkscapeconverter'
-#'sphinxcontrib.cairosvgconverter'
+'sphinxcontrib.cairosvgconverter'
 #'sphinx.ext.imgconverter'
 ]
 #inkscape_converter_bin = '/usr/bin/inkscape'
