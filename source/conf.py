@@ -32,9 +32,9 @@ release = '2023.01'
 # ones.
 extensions = [
 #'sphinxcontrib.rsvgconverter',
-'sphinxcontrib.inkscapeconverter'
+#'sphinxcontrib.inkscapeconverter'
 #'sphinxcontrib.cairosvgconverter'
-#'sphinx.ext.imgconverter'
+'sphinx.ext.imgconverter'
 ]
 #inkscape_converter_bin = '/usr/bin/inkscape'
 #rsvg_converter_args = ['-a']
