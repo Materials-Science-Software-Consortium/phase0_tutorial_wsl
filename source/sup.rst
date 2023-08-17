@@ -210,7 +210,7 @@ PHASE/0は独自の形式(F_DYNM形式)で原子座標の履歴などを出力�
 
 conv.pyは対話的に利用します。たとえば，nfdynm.dataファイルをCIFに変換する手続きは下記の通りです。
 
-.. table:: conv.pyの使い方
+.. table:: conv.pyの利用例
    :widths: auto
    :class: longtable
 
@@ -315,8 +315,9 @@ conv.py起動時に，以下のオプションを指定することができま�
 
 Linuxコマンド
 -------------
+本チュートリアルで用いたLinuxコマンドについて説明します。
 
-.. table:: Linuxコマンド
+.. table:: 本チュートリアルで用いたLinuxコマンド
    :widths: auto
    :class: longtable
 
