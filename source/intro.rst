@@ -4,7 +4,7 @@
 概要
 ------------------
 
-本稿は第一原理バンド計算ソフトウェアPHASE/0のチュートリアルです。第一原理バンド計算は多大な計算リソースが必要な場合が多いですが，本チュートリアルは一般的なパソコンでも実行できるような規模の問題のみを扱い，その実行方法や結果の見方について解説します。環境としては，\ `Windows上で構築したWSL環境 <https://learn.microsoft.com/ja-jp/windows/wsl/install>`_ を想定していますが，一般的なGNU/LinuxやmacOSでも実行できるはずです。お手元のパソコンにおいて実際に例題を実行することを通じて，初学者がPHASE/0の基本的な使い方を自習することができることを目的としています。紹介されている例題の入力ファイルは `GitHubで公開されているため <https://github.com/Materials-Science-Software-Consortium/phase0_tutorial_wsl/tree/master/wsl>`_ 自由にダウンロードすることができるようになっています。
+本稿は第一原理バンド計算ソフトウェアPHASE/0のチュートリアルです。第一原理バンド計算は多大な計算リソースが必要な場合が多いですが，本チュートリアルは一般的なパソコンでも実行できるような規模の問題のみを扱い，その実行方法や結果の見方について解説します。環境としては，\ `Windows上で構築したWSL環境 <https://learn.microsoft.com/ja-jp/windows/wsl/install>`_ を想定していますが，一般的なGNU/LinuxやmacOSでも実行できるはずです。お手元のパソコンにおいて実際に例題を実行することを通じて，初学者がPHASE/0の基本的な使い方を自習することができることを目的としています。紹介されている例題の入力ファイルは `GitHubで公開されているため <https://github.com/Materials-Science-Software-Consortium/phase0_tutorial_wsl/tree/main/wsl>`_ 自由にダウンロードすることができるようになっています。
 
 本チュートリアルの構成
 -----------------------
