@@ -92,7 +92,7 @@ TOTAL ENERGY FOR *N* -TH ITER= の後の数値が\ *N*\ 回目のSCF計算で得
   $ grep TH output000>TH
   $ gnuplot
   gnuplot> set datafile fortran
-  gnuplot> plot ’TH’ using (abs($10)) with lines title ’edel’
+  gnuplot> plot 'TH' using (abs($10)) with lines title 'edel'
   gnuplot> set log y
   gnuplot> replot
 
@@ -139,8 +139,8 @@ nfefn.dataファイルの内容は単純なので，プロットツールなど�
 .. code-block:: text
 
   $ gnuplot
-  gnuplot> plot ‘nfefn.data’ using 1:3 with lines title ‘energy’
-  gnuplot> replot ‘nfefn.data’ using 1:4 with lines axis x1y2 title ‘max. force’
+  gnuplot> plot 'nfefn.data' using 1:3 with lines title 'energy'
+  gnuplot> replot 'nfefn.data' using 1:4 with lines axis x1y2 title 'max. force'
   gnuplot> set log y2
   gnuplot> set y2tics
   gnuplot> replot
