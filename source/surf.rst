@@ -92,7 +92,7 @@ PHASE/0は平面波基底を利用するので扱うことが可能なのは周�
 
 .. parsed-literal::
 
-  mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例題の\ **k**\ 点数は2なので，多くのコアを搭載したマシンでも\ **k**\ 点並列数は2以下とする必要があります。
 
@@ -226,7 +226,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 
 .. parsed-literal::
 
-  mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例題の\ **k**\ 点数は4なので，多くのコアを搭載したマシンでも\ **k**\ 点並列数は4以下とする必要があります。
 
@@ -239,7 +239,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/dos.pl dos.data -mode=atom -color -with_fermi
+  ~/|PHASE020XX.yy|/dos.pl dos.data -mode=atom -color -with_fermi
 
 この操作の結果dos_a001.eps, dos_a002.eps, ....といったEPSファイルが得られます。参考のため，得られる結果の一部の図を紹介します。
 
@@ -253,7 +253,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 workfuncプログラムを使用することによって仕事関数を得ることができます。まずはworkfuncプログラムをコンパイルしましょう。
 
 .. parsed-literal::
-   $ pushd $HOME/|PHASE020XX.yy|/src_workfunc
+   $ pushd ~/|PHASE020XX.yy|/src_workfunc
    $ make F90=ifort
    ifort -c -O  m_Const_Parameters.f90
    ifort -c -O   m_ArraySize_Parameters.F90
@@ -268,8 +268,8 @@ workfuncプログラムを実行すると得られるnfvlcr_av.dataファイル�
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/workfunc
-  $ $HOME/|PHASE020XX.yy|/bin/workfunc.pl nfvlcr_av.data
+  $ ~/|PHASE020XX.yy|/bin/workfunc
+  $ ~/|PHASE020XX.yy|/bin/workfunc.pl nfvlcr_av.data
   estimated work function : 4.74259 eV
 
 \ :numref:`si_surface_workfunc` はworkfunc.plスクリプトによって得られたポテンシャルと\ *c*\ 軸方向の距離の関係です。真空域でのポテンシャルの値とフェルミエネルギーとの差が仕事関数に対応します。

@@ -39,7 +39,7 @@ PHASE/0による計算を実行するには，以下のファイルが必要で�
 
 .. parsed-literal::
 
-   mpirun -n NP $HOME/|PHASE020XX.yy|/bin/phase ne=NE nk=NK
+   mpirun -n NP ~/|PHASE020XX.yy|/bin/phase ne=NE nk=NK
 
 NPにはプロセス数（コア数），NEにはバンド並列数，NKにはk点並列数を指定します。NPはお使いの環境に合わせて入力し，NP = NE × NKとなるようバンド，k点の並列数を指定します。また，最後に&と入力して実行するとバックグラウンドで計算を実行することができます。
 

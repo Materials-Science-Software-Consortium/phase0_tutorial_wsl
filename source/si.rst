@@ -95,7 +95,7 @@ cube形式で出力するので拡張子をcubeに変更しておいた方が便
 
 .. parsed-literal::
 
-   mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+   mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例では\ **k**\ 点2並列で計算を実行しました。お使いのコンピューターのCPUに搭載されたコアの数に応じて並列数を決めるようにしてください。
 
@@ -234,7 +234,7 @@ kpoint.dataファイルにバンド構造を計算したい対称線上の\ **k*
 
 .. parsed-literal::
 
-  $ $HOME/|PHASE020XX.yy|/bin/band_kpoint.pl bandkpt.in
+  $ ~/|PHASE020XX.yy|/bin/band_kpoint.pl bandkpt.in
   Distance of 1 = 1
   Distance of 2 = 0.866025403784439
   Distance of 3 = 0.612372435695794
@@ -257,7 +257,7 @@ kpoint.dataファイルにバンド構造を計算したい対称線上の\ **k*
 
 .. parsed-literal::
 
-  mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+  mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
@@ -270,7 +270,7 @@ SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -color -with_fermi
+  ~/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -color -with_fermi
 
 band.plにはいくつかオプションがありますが，そのうち-color (カラーのバンド図を作成する)と -with_fermi (フェルミエネルギーの位置をあらわす線を描画する)を有効にしました。バンド図はband_structure.epsというEPS形式の画像ファイルとして得られます。これを表示するにはevinceコマンドを利用します。
 
@@ -332,7 +332,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+   mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
@@ -364,7 +364,7 @@ dos.dataファイルから“状態密度図”を作成するPerlスクリプ�
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -color -with_fermi
+  ~/|PHASE020XX.yy|/bin/dos.pl dos.data -color -with_fermi
 
 dos.plにはいくつかオプションがありますが，そのうち-color (カラーのバンド図を作成する)と -with_fermi (フェルミエネルギーの位置をあらわす線を描画する)を有効にしました。状態密度図はdensity_of_states.epsというEPS形式の画像ファイルとして得られます。これを表示するにはevinceコマンドを利用します。
 
@@ -431,7 +431,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/epsmain ne=1 nk=2
+   mpirun -n 2 ~/|PHASE020XX.yy|/bin/epsmain ne=1 nk=2
 
 
 .. _計算結果の解析-3:
@@ -517,7 +517,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 $HOME/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+   mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 \ :ref:`si2_scf_section` と違い，対称性に応じて原子を変位させながら原子間力の計算を行うので複数回のSCF計算を行います。この例では2回のSCF計算が実行されます。原子を変位させると対称性がそこなわれるためSCF計算1回あたりの計算時間も長くなる傾向になります。
 
@@ -557,7 +557,7 @@ mode.dataファイルから振動モード図を作成するPerlスクリプト�
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/freq.pl mode.data
+  ~/|PHASE020XX.yy|/bin/freq.pl mode.data
 
 結果得られる振動モード図は :numref:`si_freq` のようなものです。対称性に応じてモードを分類し，その振動数を表示します。
 
