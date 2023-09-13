@@ -146,7 +146,7 @@ band.plをたとえば以下のように実行します。
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -erange=-10,10 -color -with_fermi
+  ~/|PHASE020XX.yy|/bin/band.pl nfenergy.data bandkpt.in -erange=-10,10 -color -with_fermi
 
 鉄の場合はエネルギーの範囲が広いので，-erangeオプションを用いてフェルミエネルギーを基準に-10 eVから10 eVの状態を対象としました。-color, -with_fermiオプションも有効にしました。
 
@@ -188,7 +188,7 @@ dos.plをたとえば以下のように実行します。
 
 .. parsed-literal::
 
-  $HOME/|PHASE020XX.yy|/bin/dos.pl dos.data -with_fermi -color -erange=-10,10
+  ~/|PHASE020XX.yy|/bin/dos.pl dos.data -with_fermi -color -erange=-10,10
 
 バンド計算の場合と同様 -erangeオプションを用いてフェルミエネルギーを基準に-10 eVから10 eVの状態を対象としました。-color, -with_fermiオプションもシリコン結晶の場合と同様有効にしました。\ :numref:`fe_dos` のような状態密度図が得られるはずです。
 
