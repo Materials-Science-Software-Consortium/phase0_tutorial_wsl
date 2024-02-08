@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'PHASE/0 チュートリアル'
-copyright = '2023, PHASEシステム研究会'
+project = 'PHASE/0講習会 −高性能計算・データ分析基盤システム SQUIDを用いたハンズオン− 兼 第19回PHASE/0利用講習会：基礎編'
+copyright = '2024, PHASEシステム研究会'
 author = 'PHASEシステム研究会'
 
 # The full version, including alpha/beta/rc tags
-release = '2023.01'
+#release = '2023.01'
 
 
 # -- General configuration ---------------------------------------------------
