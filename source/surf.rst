@@ -246,6 +246,7 @@ workfuncプログラムを使用することによって仕事関数を得るこ
 
 .. parsed-literal::
 
+  $ module load BaseCPU
   $ ~/|PHASE020XX.yy|/bin/workfunc
   $ ~/|PHASE020XX.yy|/bin/workfunc.pl nfvlcr_av.data
   estimated work function : 4.74259 eV
