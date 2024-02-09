@@ -15,12 +15,12 @@
 準備
 ----------------------
 
-必要な実行バイナリーやサンプルデータをかためたアーカイブはSQUIDの ``/sqfs/home/u6c171/20240213.tar.gz`` に配置されています。ご自身のホームディレクトリーにコピーして展開してください。
+必要な実行バイナリーやサンプルデータをかためたアーカイブはSQUIDの ``/system/lecture/20240213_PHASE0/20240213.tar.gz`` に配置されています。ご自身のホームディレクトリーにコピーして展開してください。
 
 .. code-block:: text
 
   cd ~
-  cp /sqfs/home/u6c171/20240213.tar.gz .
+  cp /system/lecture/20240213_PHASE0/20240213.tar.gz .
   tar -zxvf 20240213.tar.gz
 
 原子配置の可視化には `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用いるので，こちらはローカルPCにインストールしてください。

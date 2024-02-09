@@ -73,6 +73,88 @@ PHASE/0の入力パラメーターファイルは，このように波カッコ{
   - atom_listのatomsテーブルにおいて原子配置そのものを指定しています。
 - postprocessingブロックのchargeブロックにおいてsw_charge_rspace = onとしています。こうすることによって実空間にマップした電荷密度をファイルに出力します。また，filetype = cubeとすることによってその形式をGaussian cube形式にしています。
 
+座標データの可視化
+^^^^^^^^^^^^^^^^^^^^^^^
+nfinp.dataファイルに記録されている座標データを可視化する方法を説明します。PHASE/0の入力データ形式をVESTAによって直接可視化することはできません。そこで，PHASE/0付属の座標データコンバーターconv.pyスクリプトを用います。以下のようにコマンドを実行します。
+
+.. table:: conv.pyの実行
+   :widths: auto
+   :class: longtable
+
+   +---------------------------------------+----------------------------------+
+   | 画面に現れる文字列                    | 説明                             |
+   +=======================================+==================================+
+   | $ ~/phase0_2023.01/bin/conv.py        |                                  |
+   +---------------------------------------+----------------------------------+
+   | atomic configuration converter        | 変換元のファイル形式\            |
+   |                                       |                                  |
+   | utility.                              | を指定する。0のphase_inputで\    |
+   |                                       | よいのでそのままEnter            |
+   |                                       |                                  |
+   | Copyright (C) PHASE System Consortium |                                  |
+   |                                       |                                  |
+   | select the type of the input          |                                  |
+   | atomic coordinate file                |                                  |
+   |                                       |                                  |
+   | 0. phase_input                        |                                  |
+   | 1. phase_output                       |                                  |
+   | 2. VASP_input                         |                                  |
+   | 3. VASP_output                        |                                  |
+   | 4. OpenMX_input                       |                                  |
+   | 5. OpenMX_output                      |                                  |
+   | 6. XSF                                |                                  |
+   | 7. xyz                                |                                  |
+   | 8. cube                               |                                  |
+   | 9. cif                                |                                  |
+   | 10. dmol                              |                                  |
+   | 11. LAMMPS_output                     |                                  |
+   |                                       |                                  |
+   | x. Exit                               |                                  |
+   |                                       |                                  |
+   | Please enter a selection              |                                  |
+   | (0/1/2/3/4/5/6/7/8/9/10/11/x)         |                                  |
+   | [0]:                                  |                                  |
+   +---------------------------------------+----------------------------------+
+   | Please enter the name of the          | nfinp.data\                      |
+   |                                       |                                  |
+   | input atomic coordinate file, or      | ファイルのファイル名を指定。nf\  |
+   |                                       |                                  |
+   | type x to exit. [nfinp.data]:         | inp.dataでよいのでそのままEnter  |
+   +---------------------------------------+----------------------------------+
+   | select the type of the output         | 変換先の形式を指\                |
+   |                                       |                                  |
+   | atomic coordinate file                | 定する。CIFに対応する7を入力し\  |
+   |                                       | Enter                            |
+   | 0. phase_input                        |                                  |
+   | 1. phase_output                       |                                  |
+   | 2. VASP_input                         |                                  |
+   | 3. OpenMX_input                       |                                  |
+   | 4. XSF                                |                                  |
+   | 5. xyz                                |                                  |
+   | 6. cube                               |                                  |
+   | 7. cif                                |                                  |
+   | 8. dmol                               |                                  |
+   | 9. LAMMPS_input                       |                                  |
+   |                                       |                                  |
+   | x. Exit                               |                                  |
+   |                                       |                                  |
+   | Please enter a selection              |                                  |
+   | (0/1/2/3/4/5/6/7/8/9/x) [1]:          |                                  |
+   +---------------------------------------+----------------------------------+
+   | Please enter the name the output      | 出力ファイル名を指定する。       |
+   |                                       |                                  |
+   | atomic coordinate file, or type       | デフォルト値はcoord.cif          |
+   |                                       |                                  |
+   | x to exit. [coord.cif]:               |                                  |
+   +---------------------------------------+----------------------------------+
+
+結果得られたCIF (デフォルトファイル名coord.cif) をローカルのパソコンに転送します。ついでVESTAを起動し，FileメニューからOpenを選びます。するとファイル選択ダイアログが得られるのでcoord.cifを選びます。この操作の結果 :numref:`si_crystal` のような結晶構造の図が得られるはずです。
+
+.. figure:: media/si_crystal.png
+  :name: si_crystal
+
+  シリコン結晶をVESTAを用いて可視化した様子
+
 file_names.dataファイル
 ^^^^^^^^^^^^^^^^^^^^^^^
 
