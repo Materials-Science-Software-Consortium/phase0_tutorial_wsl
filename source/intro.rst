@@ -23,7 +23,7 @@
   cp /sqfs/home/u6c171/20240213.tar.gz .
   tar -zxvf 20240213.tar.gz
 
-原子配置の可視化には `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用いるので，こちらはローカルPCにインストールしておくことが推奨されます。
+原子配置の可視化には `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用いるので，こちらはローカルPCにインストールしてください。
 
 PHASE/0の引用情報など
 -----------------------

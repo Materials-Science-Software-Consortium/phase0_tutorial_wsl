@@ -637,7 +637,7 @@ file_names.dataファイルの内容は下記のようになっています。
 シェルスクリプト
 ^^^^^^^^^^^^^^^^
 
-利用するシェルスクリプト(cubic.sh)は以下のようなものです。なお，行頭の数値は説明用に付加したものであり，実際はありません。
+利用するシェルスクリプト(run.sh)は以下のようなものです。なお，行頭の数値は説明用に付加したものであり，実際はありません。
 
 .. code-block:: bash
   :linenos:
@@ -647,6 +647,7 @@ file_names.dataファイルの内容は下記のようになっています。
    #PBS -l elapstim_req=0:01:00
    #PBS --group=G14671
    #PBS -l cpunum_job=76
+   #PBS -y 2038
 
    module load BaseCPU
    cd ${PBS_O_WORKDIR}
@@ -724,18 +725,24 @@ file_names.dataファイルの内容は下記のようになっています。
 
 通常得られるnfefn.dataファイルの内容と似ていますが，1列目が原子単位の体積である点が異なります。
 
-得られたnfefn.dataファイルとgnuplotを利用して，マーナハンの状態方程式にフィットしてみます。以下の操作を行ってください。
+得られたnfefn.dataファイルとgnuplotを利用して，マーナハンの状態方程式にフィットしてみます。そのためにev.gpiというのgnuplotのスクリプトが用意されています。その内容は以下の通り。
 
 .. code-block:: text
 
-  $ gnuplot
+  f(x) = (a*x/(b*(b-1)))*(b*(1-c/x)+(c/x)**b-1)+d
+  a=0.001
+  b=2
+  c=1100
+  d=-7.8
+  fit f(x) 'nfefn.data' using 1:4 via a,b,c,d
+  plot f(x), 'nfefn.data' using 1:4
+
+次のようにgnuplotを起動します。
+
+.. code-block:: text
+
+  $ gnuplot -p ev.gpi
   ...
-  gnuplot> f(x) = (a*x/(b*(b-1)))*(b*(1-c/x)+(c/x)**b-1)+d
-  gnuplot> a=0.001
-  gnuplot> b=2
-  gnuplot> c=1100
-  gnuplot> d=-7.8
-  gnuplot> fit f(x) 'nfefn.data' using 1:4 via a,b,c,d
   ...
   ...
   Final set of parameters Asymptotic Standard Error
