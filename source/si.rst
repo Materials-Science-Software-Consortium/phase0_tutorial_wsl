@@ -86,10 +86,10 @@ nfinp.dataファイルに記録されている座標データを可視化する�
    +=======================================+==================================+
    | $ ~/phase0_2023.01/bin/conv.py        |                                  |
    +---------------------------------------+----------------------------------+
-   | atomic configuration converter        | 変換元のファイル形式\            |
+   | atomic configuration converter        | 変換元のファイル形式             |
+   |                                       | を指定する。0のphase_inputで     |
+   | utility.                              | よいのでそのままEnter            |
    |                                       |                                  |
-   | utility.                              | を指定する。0のphase_inputで\    |
-   |                                       | よいのでそのままEnter            |
    |                                       |                                  |
    | Copyright (C) PHASE System Consortium |                                  |
    |                                       |                                  |
@@ -115,15 +115,12 @@ nfinp.dataファイルに記録されている座標データを可視化する�
    | (0/1/2/3/4/5/6/7/8/9/10/11/x)         |                                  |
    | [0]:                                  |                                  |
    +---------------------------------------+----------------------------------+
-   | Please enter the name of the          | nfinp.data\                      |
-   |                                       |                                  |
+   | Please enter the name of the          | nfinp.data                       |
    | input atomic coordinate file, or      | ファイルのファイル名を指定。nf\  |
-   |                                       |                                  |
    | type x to exit. [nfinp.data]:         | inp.dataでよいのでそのままEnter  |
    +---------------------------------------+----------------------------------+
-   | select the type of the output         | 変換先の形式を指\                |
-   |                                       |                                  |
-   | atomic coordinate file                | 定する。CIFに対応する7を入力し\  |
+   | select the type of the output         | 変換先の形式を指                 |
+   | atomic coordinate file                | 定する。CIFに対応する7を入力し   |
    |                                       | Enter                            |
    | 0. phase_input                        |                                  |
    | 1. phase_output                       |                                  |
@@ -142,9 +139,7 @@ nfinp.dataファイルに記録されている座標データを可視化する�
    | (0/1/2/3/4/5/6/7/8/9/x) [1]:          |                                  |
    +---------------------------------------+----------------------------------+
    | Please enter the name the output      | 出力ファイル名を指定する。       |
-   |                                       |                                  |
    | atomic coordinate file, or type       | デフォルト値はcoord.cif          |
-   |                                       |                                  |
    | x to exit. [coord.cif]:               |                                  |
    +---------------------------------------+----------------------------------+
 
@@ -730,7 +725,6 @@ file_names.dataファイルの内容は下記のようになっています。
    #PBS --group=G14671
    #PBS -l cpunum_job=76
    #PBS -y 2038
-
    module load BaseCPU
    cd ${PBS_O_WORKDIR}
 
@@ -755,6 +749,7 @@ file_names.dataファイルの内容は下記のようになっています。
      echo -n $vol>> nfefn.data ; tail -1 vol$vol/nfefn.data >>nfefn.data
    done
 
+-  1行目から8行目はジョブスケジューラーの設定など。
 -  10行目で1番目の体積の値，11行目で計算する体積の数，12行目で体積の刻み幅を指定しています。この例では，まず1000 bohr\ :sup:`3` からはじめ，10 bohr\ :sup:`3` きざみで体積を増やしていき，21回の計算を行うことで1200 bohr\ :sup:`3` まで体積を大きくして計算を行うことになります。
 -  13行目はプロセス数，14行目はk点並列数，15行目はバンド並列数です。お使いの環境にあわせて編集してください。
 -  17行目でPHASE/0を起動するコマンドを変数PHASE0に格納しています。
