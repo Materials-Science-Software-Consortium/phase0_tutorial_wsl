@@ -86,7 +86,7 @@ latex_elements = {
         'preamble': r''' \usepackage{braket} '''
 }
 rst_prolog=u"""
-.. |PHASE020XX.YY| replace:: phase0_2023.01
+.. |PHASE020XX.YY| replace:: phase0_2024.01
 """
 
 master_doc = 'index'

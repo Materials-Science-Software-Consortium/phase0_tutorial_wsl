@@ -6,7 +6,7 @@ dv=10
 np=2
 nk=2
 ne=1
-PHASE0="mpiexec -n ${np} $HOME/phase0_2023.01/bin/phase ne=${ne} nk=${nk}"
+PHASE0="mpiexec -n ${np} $HOME/phase0_2024.01/bin/phase ne=${ne} nk=${nk}"
 rm -f nfefn.data
 echo ${PHASE0}
 for v in `seq 1 $n`;do
