@@ -15,7 +15,7 @@
 環境設定など
 ----------------------
 
-本チュートリアルを実行するにはPHASE/0がお使いのパソコンにインストールされている必要があります。もしインストールされていないのであれば，\ `このサイトの情報 <https://github.com/Materials-Science-Software-Consortium/phase0_install/tree/main/WSL>`_ などを参考にインストールします。WSL環境を用意し，UbuntuなどのLinuxディストリビューションをインストールすることができたらPHASE/0のインストールとgnuplot, evinceなどの可視化用ソフトウェアのインストールを行ってください。本稿では以降ホームディレクトリーに |PHASE020XX.YY| がインストールされていることを仮定して説明を進めます。また，原子配置の可視化に `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用いるので，こちらもインストールしておくことが推奨されます。
+本チュートリアルを実行するにはPHASE/0と可視化用のソフトウェアがお使いのパソコンにインストールされている必要があります。もしインストールされていないのであれば，\ `このサイトの情報 <https://github.com/Materials-Science-Software-Consortium/phase0_install/tree/main/WSL>`_ などを参考にインストールします。WSL環境を用意し，UbuntuなどのLinuxディストリビューションをインストールすることができたらPHASE/0のインストールと可視化用ソフトウェアのgnuplot, evinceのインストールを行ってください。本稿では以降ホームディレクトリーに |PHASE020XX.YY| がインストールされていることを仮定して説明を進めます。また，原子配置の可視化に `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用いるので，こちらもインストールしておくことが推奨されます。
 
 PHASE/0の引用情報など
 -----------------------
