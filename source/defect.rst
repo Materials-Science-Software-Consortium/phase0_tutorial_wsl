@@ -144,7 +144,7 @@ Impurity-interstitialの生成エネルギーは以下のように評価する�
 
 ここで\ :math:`E_{\text{tot}}\left( \text{Crystal} \right)`\ は結晶の原子1個当たりの全エネルギー，\ :math:`E_{\text{tot}}\left( \text{Crystal} + \text{point defect} \right)`\ は点欠陥を含むスーパーセルの全エネルギー，\ :math:`E_{\text{tot}}(\text{atom})`\ は原子1個の全エネルギーです。
 
-たとえば，tetrahedral位置にヘリウム原子が入り込んだ系の全エネルギーは-106.8410461476 hartree 結晶のスーパーセルの全エネルギーは前節でも言及したように -104.0740790123 hartreeヘリウム原子の全エネルギーは-2.8627340281 hartreeなので欠陥生成エネルギーは
+たとえば，tetrahedral位置にヘリウム原子が入り込んだ系の全エネルギーは-106.8410461476 hartree, 結晶のスーパーセルの全エネルギーは前節でも言及したように -104.0740790123 hartree, ヘリウム原子の全エネルギーは-2.8627340281 hartreeなので，欠陥生成エネルギーは
 
 .. math:: - 106.8410461476 - \left( 17 - 1 \right) \times \left( \frac{- 104.0740790123}{16} \right) - ( - 2.8627340281) \approx 0.0958\ \text{hartree}
 
