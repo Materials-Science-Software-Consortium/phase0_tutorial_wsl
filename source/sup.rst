@@ -35,11 +35,11 @@ PHASE/0による計算を実行するには，以下のファイルが必要で�
 計算の実行
 ~~~~~~~~~~
 
-並列計算は，nfinp.dataファイルやfile_names.dataファイルのあるディレクトリーに移り，mpiexecコマンドやmpirunコマンドを介して実行します。たとえば以下のようなコマンドになります。
+並列計算は，nfinp.dataファイルやfile_names.dataファイルのあるディレクトリーに移り，mpiexecコマンドを介して実行します。たとえば以下のようなコマンドになります。
 
 .. parsed-literal::
 
-   mpirun -n NP ~/|PHASE020XX.yy|/bin/phase ne=NE nk=NK
+   mpiexec -n NP ~/|PHASE020XX.yy|/bin/phase ne=NE nk=NK
 
 NPにはプロセス数（コア数），NEにはバンド並列数，NKにはk点並列数を指定します。NPはお使いの環境に合わせて入力し，NP = NE × NKとなるようバンド，k点の並列数を指定します。また，最後に&と入力して実行するとバックグラウンドで計算を実行することができます。
 
@@ -324,7 +324,7 @@ Linuxのコマンドラインにおいてはコマンド名やファイル名を
 
 .. parsed-literal::
 
-   mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+   mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 ~/phaseまで入力してタブキーを押下すると |PHASE020XX.yy| まで補完されます。長いコマンドやファイル名を入力する際に間違いなく簡単に入力することができるので使ってみてください。
 

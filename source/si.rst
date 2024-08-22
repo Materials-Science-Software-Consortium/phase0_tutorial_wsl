@@ -91,11 +91,11 @@ cube形式で出力するので拡張子をcubeに変更しておいた方が便
 計算の実行
 ~~~~~~~~~~
 
-実際に計算を実行してみましょう。たとえば以下のようなコマンドを用いて計算を起動します。 ``mpirun`` はMPIプログラムを起動するコマンドであり，このコマンドにPHASE/0の実行バイナリーを渡すことによってプログラムを実行することができます。 ``-n 2`` は並列数が2であることを伝える ``mpirun`` コマンドのオプション,  ``nk=2`` は\ **k** \ 点2並列であることを伝えるPHASE/0に渡す引数，チルダ (~) はホームディレクトリーを表します。コマンドの入力には適宜 :ref:`tab_completion` を活用することが推奨されます。
+実際に計算を実行してみましょう。たとえば以下のようなコマンドを用いて計算を起動します。 ``mpiexec`` はMPIプログラムを起動するコマンドであり，このコマンドにPHASE/0の実行バイナリーを渡すことによってプログラムを実行することができます。 ``-n 2`` は並列数が2であることを伝える ``mpiexec`` コマンドのオプション,  ``nk=2`` は\ **k** \ 点2並列であることを伝えるPHASE/0に渡す引数，チルダ (~) はホームディレクトリーを表します。コマンドの入力には適宜 :ref:`tab_completion` を活用することが推奨されます。
 
 .. parsed-literal::
 
-   mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+   mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例では\ **k**\ 点2並列で計算を実行しました。お使いのコンピューターのCPUに搭載されたコアの数に応じて並列数を決めるようにしてください。
 
@@ -257,7 +257,7 @@ kpoint.dataファイルにバンド構造を計算したい対称線上の\ **k*
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
@@ -332,7 +332,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+   mpiexec -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 SCF計算の場合と同様，\ **k**\ 点2並列で実行してみました。
 
@@ -431,7 +431,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 ~/|PHASE020XX.yy|/bin/epsmain ne=1 nk=2
+   mpiexec -n 2 ~/|PHASE020XX.yy|/bin/epsmain ne=1 nk=2
 
 
 .. _計算結果の解析-3:
@@ -517,7 +517,7 @@ nfinp.dataファイル
 
 .. parsed-literal::
 
-   mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+   mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 \ :ref:`si2_scf_section` と違い，対称性に応じて原子を変位させながら原子間力の計算を行うので複数回のSCF計算を行います。この例では2回のSCF計算が実行されます。原子を変位させると対称性がそこなわれるためSCF計算1回あたりの計算時間も長くなる傾向になります。
 

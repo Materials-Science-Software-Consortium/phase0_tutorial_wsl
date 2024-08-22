@@ -65,7 +65,7 @@ Self-interstitialの生成エネルギー
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase
 
 .. _結果の解析-4:
 

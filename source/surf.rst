@@ -92,7 +92,7 @@ PHASE/0は平面波基底を利用するので扱うことが可能なのは周�
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例題の\ **k**\ 点数は2なので，多くのコアを搭載したマシンでも\ **k**\ 点並列数は2以下とする必要があります。
 
@@ -226,7 +226,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 この例題の\ **k**\ 点数は4なので，多くのコアを搭載したマシンでも\ **k**\ 点並列数は4以下とする必要があります。
 

@@ -65,7 +65,7 @@ SCF計算の入力の内容は下記の通り(前章と同じ部分は一部省�
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/phase ne=1 nk=2
 
 以下の要因から，原子数自体は鉄結晶よりも多いシリコン結晶の計算より有意に時間のかかる計算となります。
 
@@ -135,7 +135,7 @@ Siの場合と同様kpoint.dataファイルを生成する必要があります�
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 計算結果の解析
 ~~~~~~~~~~~~~~
@@ -173,7 +173,7 @@ Siの場合と同様，accuracyブロックのksamplingブロックにおいてm
 
 .. parsed-literal::
 
-  mpirun -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
+  mpiexec -n 2 ~/|PHASE020XX.yy|/bin/ekcal ne=1 nk=2
 
 計算結果の解析
 ~~~~~~~~~~~~~~~~~~
