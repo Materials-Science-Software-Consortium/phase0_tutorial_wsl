@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PHASE/0 チュートリアル'
-copyright = '2023, PHASEシステム研究会'
+copyright = '2024, PHASEシステム研究会'
 author = 'PHASEシステム研究会'
 
 # The full version, including alpha/beta/rc tags
-release = '2023.01'
+release = '2024.01'
 
 
 # -- General configuration ---------------------------------------------------
