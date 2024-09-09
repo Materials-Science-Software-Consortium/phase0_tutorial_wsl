@@ -32,7 +32,7 @@ release = '2024.01'
 # ones.
 extensions = [
 #'sphinxcontrib.rsvgconverter',
-'sphinxcontrib.inkscapeconverter'
+#'sphinxcontrib.inkscapeconverter'
 #'sphinxcontrib.cairosvgconverter'
 #'sphinx.ext.imgconverter'
 ]

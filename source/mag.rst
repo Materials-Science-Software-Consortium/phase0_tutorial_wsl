@@ -156,7 +156,7 @@ band.plをたとえば以下のように実行します。
 
 鉄の場合はエネルギーの範囲が広いので，-erangeオプションを用いてフェルミエネルギーを基準に-10 eVから10 eVの状態を対象としました。-color, -with_fermiオプションも有効にしました。
 
-.. figure:: media/image11.svg
+.. figure:: media/image11.png
   :name: fe_band
 
   鉄結晶のバンド構造
@@ -198,7 +198,7 @@ dos.plをたとえば以下のように実行します。
 
 バンド計算の場合と同様 -erangeオプションを用いてフェルミエネルギーを基準に-10 eVから10 eVの状態を対象としました。-color, -with_fermiオプションもシリコン結晶の場合と同様有効にしました。\ :numref:`fe_dos` のような状態密度図が得られるはずです。この図から明らかなように，スピンを考慮している場合見やすいようダウンスピンの状態密度に :math:`-1` を乗じてプロットがされます。
 
-.. figure:: media/image10.svg
+.. figure:: media/image10.png
   :name: fe_dos
 
   鉄結晶の状態密度

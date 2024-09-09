@@ -169,6 +169,9 @@ nfinp.dataファイルの内容は以下の通り（構造最適化計算と同�
     smearing{
       method = tetrahedral
     }
+    scf_convergence{
+      delta_total_energy = 1e-11
+    }
     ...
   }
   structure{
@@ -200,6 +203,7 @@ nfinp.dataファイルの内容は以下の通り（構造最適化計算と同�
 -  状態密度を四面体法で，かつ構造最適化よりも濃い密度の\ **k**\ 点メッシュで計算する設定が施されています。すなわちksamplingのmethodはmesh, smearingのmethodはtetrahedral, **k**\ 点メッシュは4×8×1となっています。
 -  構造最適化計算の最後の結果を用いるため，structureブロックにおいてmethod = fileを指定しています。さらにfileブロックにおいてfiletypeをphase0_outputとしています。このように設定するとnfdynm.dataファイルの最後のコマを入力座標として読み込みます。このような場合でも原子の属性値の定義を行うためにatom_listブロックのatomsテーブル自体は必要です。
 -  postprocessingブロックで状態密度計算，原子分割局所状態密度計算，仕事関数計算の設定が施されています。
+-  仕事関数をもとめるためには，収束させがたい真空域の電荷密度もある程度正確に求まっている必要があります。そのため， ``scf_convergence`` ブロックの下で ``delta_total_energy = 1e-11`` と設定することによって収束判定条件をデフォルト値の ``1e-9`` よりも厳しくしています。
 
 .. _file_names.dataファイル-3:
 
@@ -245,7 +249,7 @@ F_POSによって構造最適化計算で得たnfdynm.dataファイルを指し�
 
 1番目の原子と2番目の原子の局所状態密度(dos_a001.epsおよびdos_a002.eps)
 
-.. figure:: media/image14.svg
+.. figure:: media/image14.png
   :name: si_surface_aldos
 
   局所状態密度
@@ -274,7 +278,7 @@ workfuncプログラムを実行すると得られるnfvlcr_av.dataファイル�
 
 \ :numref:`si_surface_workfunc` はworkfunc.plスクリプトによって得られたポテンシャルと\ *c*\ 軸方向の距離の関係です。真空域でのポテンシャルの値とフェルミエネルギーとの差が仕事関数に対応します。
 
-.. figure:: media/image15.svg
+.. figure:: media/image15.png
   :name: si_surface_workfunc
 
   ポテンシャルと\ *c*\ 軸方向の距離の関係
