@@ -13,6 +13,9 @@ accuracy{
   smearing{
     method = tetrahedral
   }
+  scf_convergence{
+    delta_total_energy = 1e-11
+  }
   cutoff_wf = 16 rydberg
   cutoff_cd = 64 rydberg
   initial_charge_density = atomic_charge_density 
